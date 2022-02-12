@@ -1,20 +1,23 @@
-import java.sql.Date;
+import java.util.jar.Attributes.Name;
 
-public class Employee {
+public class Employee{
     private int eid;
+    protected double salary;
     private String ename;
-    private Date bday;
-    public Employee(){
-
-    }
-    public Employee(int eid,String ename,int d,int m,int y){
+    public Employee(int eid,String ename, double salary){
+        super();
         this.eid=eid;
         this.ename=ename;
-        bday=new Date(d,m,y);
-
+        this.salary=salary;
     }
-
     public void display(){
-        System.out.println("Employee["+eid+"\t"+ename+"\t"+bday+"]");
+        System.out.println("___________________________________________________________________________________________________________________________");
+        System.out.println("\t Employee Id "+eid);
+        System.out.println("\t Name        "+ename);
+        System.out.println("\t Salary      "+salary);
     }
+    abstract public void calSal(){
+
+    }
+    
 }
